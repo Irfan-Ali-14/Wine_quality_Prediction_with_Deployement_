@@ -4,7 +4,6 @@ import os
 from get_data import get_data, read_params
 import argparse
 
-
 def load_and_save(config_path):
     config = read_params(config_path)
     df = get_data(config_path)
