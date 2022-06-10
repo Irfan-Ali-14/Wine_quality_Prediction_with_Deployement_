@@ -27,10 +27,11 @@ def index():
         except Exception as e:
             print(e)
            # error = {"error": "Something went wrong !! try again"}
+            error = {"error": e}
             return render_template("404.html", error=e)
 
     else:
-        return render_template("index.html")
+        return render_template("index.html") 
 
 if __name__=="__main__":
     app.run("0.0.0.0", port=5000, debug=True)
